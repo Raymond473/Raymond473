@@ -1,155 +1,89 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Master the American Accent | Bank Transfer Payment</title>
+    <title>Free American Accent Training | Speak Like a Native</title>
     <style>
-        /* Basic CSS for styling */
+        /* Base Styles */
         body {
-            font-family: Segoe print, sans-serif;
+            font-family: segoescript, segoescript;
             line-height: 1.6;
             margin: 0;
             padding: 0;
             background-color: #f0f8ff;
             color: #333;
         }
+        
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
         }
+
+        /* Header Section */
         .header {
             text-align: center;
-            padding: 40px 0;
+            padding: 50px 0;
             background-color: #1e90ff;
             color: white;
         }
+
+        /* Urgency Section */
+        .urgency-banner {
+            text-align: center;
+            background: #ff4757;
+            color: white;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        #countdown {
+            font-size: 2em;
+            font-weight: bold;
+            margin: 15px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .countdown-item {
+            background: rgba(255,255,255,0.2);
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        /* CTA Button */
         .cta-button {
             display: inline-block;
-            padding: 12px 25px;
-            background-color: #ff6b6b;
+            padding: 15px 30px;
+            background-color: #25d366;
             color: white;
             text-decoration: none;
             border-radius: 5px;
-            margin: 10px 0;
             font-weight: bold;
+            font-size: 1.2em;
+            margin: 20px 0;
+            transition: transform 0.3s ease;
         }
-        .whatsapp-button {
-            background-color: #25d366; /* WhatsApp green */
+
+        .cta-button:hover {
+            transform: scale(1.05);
         }
-        .payment-box {
-            border: 2px solid #1e90ff;
-            padding: 25px;
-            margin: 30px 0;
-            border-radius: 10px;
-            background-color: white;
+
+        /* Testimonials & Features */
+        .benefits-section {
+            text-align: center;
+            margin: 40px 0;
         }
-        .bank-details {
-            background-color: #f9f9f9;
-            padding: 15px;
-            border-left: 4px solid #1e90ff;
-            margin: 15px 0;
-        }
-        
-        /* Testimonial Slideshow */
-        .testimonial-container {
-            max-width: 800px;
-            margin: 40px auto;
-            position: relative;
-            overflow: hidden;
-            height: 250px;
-        }
-        .testimonial-slide {
-            position: absolute;
-            width: 100%;
+
+        .testimonial {
+            background-color: blue;
             padding: 20px;
-            background-color: white;
+            margin: 20px 0;
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-            text-align: center;
-        }
-        .testimonial-slide.active {
-            opacity: 1;
-        }
-        .testimonial-slide p {
-            font-style: italic;
-            margin-bottom: 10px;
-        }
-        .testimonial-slide .author {
-            font-weight: bold;
-            color: #1e90ff;
-        }
-        .stars {
-            color: gold;
-            font-size: 20px;
-            margin: 10px 0;
-        }
-        
-        /* Animation for testimonial slideshow */
-        @keyframes slideShow {
-            0% { opacity: 0; }
-            10% { opacity: 1; }
-            30% { opacity: 1; }
-            40% { opacity: 0; }
-            100% { opacity: 0; }
-        }
-        .testimonial-slide:nth-child(1) {
-            animation: slideShow 12s infinite;
-        }
-        .testimonial-slide:nth-child(2) {
-            animation: slideShow 12s infinite 4s;
-        }
-        .testimonial-slide:nth-child(3) {
-            animation: slideShow 12s infinite 8s;
-        }
-        
-        /* Student Image Slideshow */
-        .student-slideshow {
-            width: 100%;
-            height: 300px;
-            position: relative;
-            margin: 30px 0;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        .student-slide {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
-        .student-slide:nth-child(1) {
-            background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3R1ZGVudHMlMjBsZWFybmluZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60');
-            animation: slideShow 15s infinite;
-        }
-        .student-slide:nth-child(2) {
-            background-image: url('https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8c3R1ZGVudHMlMjBsZWFybmluZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60');
-            animation: slideShow 15s infinite 5s;
-        }
-        .student-slide:nth-child(3) {
-            background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHN0dWRlbnRzJTIwbGVhcm5pbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60');
-            animation: slideShow 15s infinite 10s;
-        }
-        
-        /* Floating WhatsApp Button */
-        .float-whatsapp {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 100;
-            animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
         }
     </style>
 </head>
@@ -157,81 +91,80 @@
     <!-- Header Section -->
     <div class="header">
         <div class="container">
-            <h1>Master the American Accent in 3 Days! </h1>
-            <p>Join 1,000+ students who speak confidently like natives!</p>
-            <a href="#payment" class="cta-button">Enroll Now →</a>
+            <h1>FREE American Accent Training </h1>
+            <p>Start speaking confidently like a native - no payment required!</p>
+            
+            <!-- Urgency Section -->
+            <div class="urgency-banner">
+                <p>🚨 LIMITED SPOTS AVAILABLE! Only 14 remaining</p>
+                <div id="countdown">
+                    <div class="countdown-item">
+                        <span id="hours">24</span>
+                        <div>HOURS</div>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="minutes">00</span>
+                        <div>MINUTES</div>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="seconds">00</span>
+                        <div>SECONDS</div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="https://wa.me/+2348162504966?text=I%20would%20like%20to%20enroll%20for%20the%20free%20American%20accent%20training" 
+               class="cta-button"
+               target="_blank">
+               Enroll Now via WhatsApp
+            </a>
         </div>
     </div>
 
     <!-- Benefits Section -->
     <div class="container">
-        <h2>Why Choose Us?</h2>
-        <ul>
-            <li>✅ 1-on-1 Coaching with Certified Experts</li>
-            <li>✅ Flexible Online Classes</li>
-            <li>✅ Life time access<li>
-        </ul>
-    </div>
+        <div class="benefits-section">
+            <h2>What You'll Get</h2>
+            <ul>
+                <li>✅ Weekly pronunciation lessons</li>
+                <li>✅ Access to practice exercises</li>
+                <li>✅ Live Q&A sessions</li>
+                <li>✅ Personalized feedback</li>
+            </ul>
+        </div>
 
-    <!-- Student Image Slideshow -->
-    <div class="container">
-        <div class="student-slideshow">
-            <div class="student-slide"></div>
-            <div class="student-slide"></div>
+        <!-- Testimonial Section -->
+        <div class="testimonial">
+            <p>"This free course transformed how I speak English! Highly recommended!"</p>
+            <p>- Emmanuel Joshua, Portharcourt </p>
         </div>
     </div>
 
-    <!-- Testimonial Slideshow Section -->
-    <div class="testimonial-container">
-        <div class="testimonial-slide active">
-            <p>"This course changed my life! I aced my job interview in the Port harcourt and got a 30% salary increase."</p>
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <p class="author">– Joshua Stephen,Port harcourt, Nigeria. </p>
-        </div>
-        <div class="testimonial-slide">
-            <p>"After just few days, my colleagues thought I was born in America. The personalized feedback was incredible!"</p>
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <p class="author">Funke Ogunlana, Akure,Ondo state </p>
-        </div>
-        <div class="testimonial-slide">
-            <p>"I went from being nervous to speak to giving presentations confidently. Worth every penny!"</p>
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-            <p class="author">– otabil mensah, Ghana</p>
-        </div>
-    </div>
+    <script>
+        // 24-hour countdown timer
+        let countdownTime = 11 * 60 * 60; // 24 hours in seconds
 
-    <!-- Manual Payment Section -->
-    <div class="container" id="payment">
-        <div class="payment-box">
-            <h2>Bank Transfer Payment</h2>
-            <p>To enroll, transfer the course fee (<strong>#1,899 Now instead of #9,999 later</strong>) to the account below and send your payment receipt via WhatsApp.</p>
-            
-            <div class="bank-details">
-                <h3>Account Details:</h3>
-                <p><strong>Bank Name:</strong> Access Bank</p>
-                <p><strong>Account Name:</strong> Raymond Temitope Oyeneyin</p>
-                <p><strong>Account Number:</strong> 0790986274</p>
-          -
-                <p><strong>Note:</strong> Include "American Accent Course" in the transfer description.</p>
-            </div>
+        function updateTimer() {
+            const hours = Math.floor(countdownTime / 3600);
+            const minutes = Math.floor((countdownTime % 3600) / 60);
+            const seconds = countdownTime % 60;
 
-            <p>After payment, click below to confirm on WhatsApp:</p>
-            <a href="https://wa.me/+2348162504966?text=Hi!%20I%20just%20paid%20for%20the%20American%20Accent%20Course.%20Here's%20my%20receipt:" 
-               class="cta-button whatsapp-button" target="_blank">
-               Confirm Payment on WhatsApp
-            </a>
-        </div>
-    </div>
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/+2348162504966" class="float-whatsapp" target="_blank">
-        <img src="https://img.icons8.com/color/96/whatsapp--v1.png" alt="Chat on WhatsApp" width="64">
-    </a>
+            if (countdownTime <= 0) {
+                clearInterval(timerInterval);
+                document.querySelector('.urgency-banner').innerHTML = 
+                    '<p>⏰ REGISTRATION CLOSED! Join waitlist for next batch</p>';
+            } else {
+                countdownTime--;
+            }
+        }
 
-    <!-- Footer -->
-    <div class="container">
-        <p>Questions? Email: raymondoyeneyin4@gmail.com</p>
-        <p>© 2025 Your Accent Coach</p>
-    </div>
+        // Update timer every second
+        const timerInterval = setInterval(updateTimer, 1000);
+        updateTimer(); // Initial call
+    </script>
 </body>
 </html>
